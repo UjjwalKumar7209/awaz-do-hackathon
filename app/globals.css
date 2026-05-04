@@ -1,113 +1,57 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme {
+  --color-background: #050505;
+  --color-foreground: #ffffff;
+  --color-accent: #ef4444; /* Bold Red */
+  --color-accent-hover: #dc2626;
+  --color-muted: #171717;
+  --color-border: #262626;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #0f0f0f;
-  --text-primary: #0f0f0f;
-  --text-secondary: #666666;
-  --text-muted: #999999;
-  --border: #e5e5e5;
-  --accent: #0066cc;
-  --accent-hover: #0052a3;
-  --card-bg: #f9f9f9;
-  --spacing-unit: 1rem;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    /* GSAP ScrollSmoother / Lenis prep */
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #ffffff;
+  }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
-  --font-mono: var(--font-geist-mono);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Modern Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-p {
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: var(--accent-hover);
-}
-
-button {
-  font-family: inherit;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5rem;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
   
-  h2 {
-    font-size: 1.75rem;
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
   
-  h3 {
-    font-size: 1.25rem;
-  }
-}
-
-/* Utilities */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-unit);
-}
-
-.section-padding {
-  padding: 6rem var(--spacing-unit);
-}
-
-@media (max-width: 768px) {
-  .section-padding {
-    padding: 4rem var(--spacing-unit);
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
