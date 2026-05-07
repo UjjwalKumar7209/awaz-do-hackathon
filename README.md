@@ -1,8 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Awaz Do
+
+Awaz Do is a high-performance, visually striking, and brutalist-inspired landing page for a civic-tech platform. Built with a focus on premium motion-heavy user experience, intentional typography, and scroll-triggered animations while strictly adhering to a dark, minimalist design aesthetic.
+
+## Tech Stack
+
+- Framework: Next.js (App Router)
+- UI Library: React
+- Styling: Tailwind CSS
+- Animation: GSAP (GreenSock Animation Platform)
+- Icons: Lucide React
+- Utilities: clsx, tailwind-merge
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +39,22 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Next.js App Router files and main application layout.
+- `app/components/`: Reusable React components.
+  - `landing/`: Components specific to the landing page (e.g., Navbar, Preloader, SolutionSection, FinalCTA).
+- `public/`: Static assets.
 
-## Learn More
+## Design Philosophy
 
-To learn more about Next.js, take a look at the following resources:
+This project embraces a modern, brutalist-inspired dark mode aesthetic. The design prioritizes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Strict dark-mode color palette without gradients.
+- High-contrast typography and clear visual hierarchy.
+- Scroll-triggered micro-interactions and smooth GSAP animations for a premium feel.
+- Clean, modular component architecture following best practices for a professional standard.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy this Next.js app is to use the Vercel Platform. Check out the Next.js deployment documentation for more details.
