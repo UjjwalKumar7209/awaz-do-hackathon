@@ -1,12 +1,12 @@
-import Preloader from "./components/landing/Preloader";
-import Navbar from "./components/landing/Navbar";
-import Hero from "./components/landing/Hero";
-import HowItWorks from "./components/landing/HowItWorks";
-import ProblemStatement from "./components/landing/ProblemStatement";
-import SolutionSection from "./components/landing/SolutionSection";
-import ImpactSection from "./components/landing/ImpactSection";
-import FinalCTA from "./components/landing/FinalCTA";
-import CustomCursor from "./components/landing/CustomCursor";
+import Preloader from './components/landing/Preloader'
+import Navbar from './components/landing/Navbar'
+import Hero from './components/landing/Hero'
+import HowItWorks from './components/landing/HowItWorks'
+import ProblemStatement from './components/landing/ProblemStatement'
+import SolutionSection from './components/landing/SolutionSection'
+import ImpactSection from './components/landing/ImpactSection'
+import FinalCTA from './components/landing/FinalCTA'
+import CustomCursor from './components/landing/CustomCursor'
 
 export default function Home() {
   return (
@@ -15,11 +15,15 @@ export default function Home() {
       <CustomCursor />
       <Navbar />
       <Hero />
-      <HowItWorks />
+      <div id="how-it-works">
+        <HowItWorks />
+      </div>
       <ProblemStatement />
-      <SolutionSection />
+      <div id="solution">
+        <SolutionSection />
+      </div>
       <ImpactSection />
       <FinalCTA />
     </main>
-  );
+  )
 }
