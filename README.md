@@ -54,7 +54,3 @@ This project embraces a modern, brutalist-inspired dark mode aesthetic. The desi
 - High-contrast typography and clear visual hierarchy.
 - Scroll-triggered micro-interactions and smooth GSAP animations for a premium feel.
 - Clean, modular component architecture following best practices for a professional standard.
-
-## Deployment
-
-The easiest way to deploy this Next.js app is to use the Vercel Platform. Check out the Next.js deployment documentation for more details.
