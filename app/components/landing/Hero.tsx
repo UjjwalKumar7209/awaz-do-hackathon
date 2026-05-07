@@ -84,7 +84,7 @@ export default function Hero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[100svh] w-full flex flex-col items-center justify-center px-4 overflow-hidden"
+      className="relative min-h-[100svh] w-full flex flex-col items-center justify-center mt-10 px-4 overflow-hidden"
     >
       {/* Background noise texture - optional for premium feel without gradients */}
       <div
